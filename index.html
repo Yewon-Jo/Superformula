@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Superformula</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="sketch.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text|Megrim|Poiret+One|Sacramento|Share+Tech+Mono|Vast+Shadow" rel="stylesheet">
+    <style type="text/css">
+
+
+  html {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000000 url(./loading.gif) center center no-repeat;
+    color: #ffffff;
+
+    font-size: 13px;
+    line-height: 20px;
+    height: 100%;
+
+  }
+
+
+  #content {
+    color: #ffff00;
+    position: absolute;
+    font-size: 1.7rem;
+    text-shadow: 0.1em 0.1em 0.2em white;
+    top: 40%;
+    width: 100%;
+    left: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 10px;
+
+  }
+
+  #content2 {
+    color: #ffff8a;
+    position: absolute;
+    font-size: 0.8rem;
+    top: 45%;
+    width: 100%;
+    left: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 10px;
+
+  }
+
+  #mmm {
+    color: #8e8e8e;
+    position: absolute;
+    font-size: 1rem;
+    top: 88%;
+    width: 100%;
+    left: 20px;
+    font-family: 'Share Tech Mono';
+    padding: 10px;
+
+  }
+
+
+  #name {
+    color: #ffffff;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 94%;
+    width: 100%;
+    left: 20px;
+    font-family: 'Megrim', cursive;
+    padding: 10px;
+
+  }
+
+
+  </style>
+  <!-- <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  </head>
+
+  <body>
+    <!-- <div id="title">
+    Superformula
+    </div> -->
+
+
+    <div id="content">
+    </div>
+
+     <p id="content2">
+       var lon = map(j, 0, total, -PI, PI) <br><br>
+       var r1 = supershape(lon, m, 0.2, 1.7, 1.7) <br><br>
+       var lat = map(i, 0, total, -HALF_PI, HALF_PI) <br><br>
+       var r2 = supershape(lat, m, 0.2, 1.7, 1.7) </p>
+    <p id="mmm">
+      Rotation Stop : Press mouse
+    </p>
+
+    <!-- <div id="name">
+    PROTO
+    </div> -->
+
+    <script>$(document).bind('mousemove',function(e){
+      $("#content").text("m = map" + "( " + e.pageX + ", " + e.pageY + ", " + "0" + ", " + "0" + ", " + "7" + " )" );
+    }); </script>
+
+
+
+
+
+  </body>
+</html>
